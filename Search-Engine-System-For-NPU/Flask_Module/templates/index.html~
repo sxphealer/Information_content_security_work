@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+{% block index %}
+{% if keyword %}
+    <form action="{{ url_for('index') }}"  method="post" style="margin-left:30%;" >
+        <input name="keyword" maxlength="100" type="text" value = "{{ keyword }}" autocomplete="off" class="inputbox">
+        <input value="搜索" type="submit"  class="submitbox" >
+    </form>
+{% else %}
+    <form action="{{ url_for('index') }}"  method="post" style="margin-left:30%;"  >
+        <input name="keyword" maxlength="100" type="text" value="Your IP is {{ userip }}" autocomplete="off" class="inputbox">
+        <input value="搜索" type="submit"  class="submitbox" >
+    </form>
+{% endif %}
+<div>
+{% if keyword %}
+<div id=content>
+{% block result %}
+{% endblock %}
+</div>
+{% endif %}
+<div id="sidebar">
+<table>
+<td><h3>□ 学院设置</h3></td>
+<tr>
+<td><a href="http://hangkong.nwpu.edu.cn/" target="_blank">·航空学院</a></td>
+<td><a href="http://hangtian.nwpu.edu.cn/" target="_blank">·航天学院</a></td>
+</tr>
+<tr>
+<td><a href="http://cailiao.nwpu.edu.cn/" target="_blank">·航海学院</a></td>
+<td><a href="http://hangkong.nwpu.edu.cn/" target="_blank">·材料学院</a></td>
+</tr>
+<tr>
+<td><a href="http://jidian.nwpu.edu.cn/" target="_blank">·机电学院</a></td>
+<td><a href="http://tujian.nwpu.edu.cn/" target="_blank">·力学与土木建筑学院</a></td>
+</tr>
+<tr>
+<td><a href="http://dongneng.nwpu.edu.cn/" target="_blank">·动力与能源学院</a></td>
+<td><a href="http://dianzi.nwpu.edu.cn/" target="_blank">·电子信息学院</a></td>
+</tr>
+<tr>
+<td><a href="http://zdhxy.nwpu.edu.cn/" target="_blank">·自动化学院</a></td>
+<td><a href="http://jsj.nwpu.edu.cn/" target="_blank">·计算机学院</a></td>
+</tr>
+<tr>
+<td><a href="http://lxy.nwpu.edu.cn/" target="_blank">·理学院</a></td>
+<td><a href="http://som.nwpu.edu.cn/" target="_blank">·管理学院</a></td>
+</tr>
+<tr>
+<td><a href="http://rwjj.nwpu.edu.cn/" target="_blank">·人文与经法学院</a></td>
+<td><a href="http://rjwdz.nwpu.edu.cn/" target="_blank">·软件与微电子学院</a></td>
+</tr>
+<tr>
+<td><a href="http://shengming.nwpu.edu.cn/" target="_blank">·生命学院</a></td>
+<td><a href="http://wgyxy.nwpu.edu.cn/" target="_blank">·外国语学院</a></td>
+</tr>
+<tr>
+<td><a href="http://honors.nwpu.edu.cn/" target="_blank">·教育实验学院</a></td>
+<td><a href="http://gjjyxy.nwpu.edu.cn/" target="_blank">·国际教育学院</a></td>
+</tr>
+<tr>
+<td><a href="http://gongcheng.nwpu.edu.cn/" target="_blank">·工程实践训练中心</a></td>
+<td><a href="http://tiyu.nwpu.edu.cn/" target="_blank">·体育部</a></td>
+</tr>
+<tr>
+<td><a href="http://ysjyzx.nwpu.edu.cn/" target="_blank">·艺术教育中心</a></td>
+</tr>
+</table>
+<table>
+<td><h3>□党群部门 </h3></td>
+<tr>
+<td><a href="http://dangzheng.nwpu.edu.cn/" target="_blank">·学校办公室</a></td>
+<td><a href="http://zuzhibu.nwpu.edu.cn/" target="_blank">·党委组织部</a></td>
+</tr>
+<tr>
+<td><a href="http://news.nwpu.edu.cn/xcb" target="_blank">·党委宣传部</a></td>
+<td><a href="http://jiwei.nwpu.edu.cn/" target="_blank">·纪委办公室</a></td>
+</tr>
+<tr>
+<td><a href="http://xsc.stuclub.cn/" target="_blank">·党委学生工作部</a></td>
+<td><a href="http://ygb.nwpu.edu.cn/index.jsp?urltype=tree.TreeTempUrl&wbtreeid=1001" target="_blank">·党委研究生工作部</a></td>
+</tr>
+<tr>
+<td><a href="http://dangwei.nwpu.edu.cn/" target="_blank">·机关党委</a></td>
+<td><a href="http://gonghui.nwpu.edu.cn/" target="_blank">·工会</a></td>
+</tr>
+<tr>
+<td><a href="http://youth.nwpu.edu.cn/" target="_blank">·团委</a></td>
+<td><a href="http://lituixiu.nwpu.edu.cn/" target="_blank">·离退休党委</a></td>
+</tr>
+</table>
+<table>
+<td><h3>□ 行政部门</h3></td>
+<tr>
+<td><a href="http://dangzheng.nwpu.edu.cn/" target="_blank">·学校办公室</a></td>
+<td><a href="http://fazhan.nwpu.edu.cn/" target="_blank">·发展规划处</a></td>
+</tr>
+<tr>
+<td><a href="http://gs.nwpu.edu.cn/" target="_blank">·研究生院</a></td>
+<td><a href="http://jiaowu.nwpu.edu.cn/" target="_blank">·教务处</a></td>
+</tr>
+<tr>
+<td><a href="http://222.24.192.86/" target="_blank">·科学技术管理部</a></td>
+<td><a href="http://guoji.nwpu.edu.cn/" target="_blank">·国际合作处</a></td>
+</tr>
+<tr>
+<td><a href="http://renshi.nwpu.edu.cn/" target="_blank">·人事处</a></td>
+<td><a href="http://xsc.stuclub.cn/" target="_blank">·学生处</a></td>
+</tr>
+<tr>
+<td><a href="http://caiwu.nwpu.edu.cn/" target="_blank">·财务处</a></td>
+<td><a href="http://guozi.nwpu.edu.cn/" target="_blank">·国有资产管理处</a></td>
+</tr>
+<tr>
+<td><a href="http://jijian.nwpu.edu.cn/" target="_blank">·基建处 </a></td>
+<td><a href="http://jiwei.nwpu.edu.cn/" target="_blank">·监察处</a></td>
+</tr>
+<tr>
+<td><a href="http://shenji.nwpu.edu.cn/" target="_blank">·审计处</a></td>
+<td><a href="http://gongan.nwpu.edu.cn/" target="_blank">·保卫处</a></td>
+</tr>
+<tr>
+<td><a href="http://lituixiu.nwpu.edu.cn/" target="_blank">·离退休工作处</a></td>
+<td><a href="http://baomi.nwpu.edu.cn/" target="_blank">·保密处</a></td>
+</tr>
+<tr>
+<td><a href="http://xyh.nwpu.edu.cn/" target="_blank">·校友总会办公室</a></td>
+<td><a href="http://xxzx.nwpu.edu.cn/" target="_blank">·信息中心</a></td>
+</tr>
+<tr>
+<td><a href="http://caxqglb.nwpu.edu.cn/" target="_blank">·长安校区管理办公室</a></td>
+<td><a href="http://houqinban.nwpu.edu.cn/" target="_blank">·后勤办公室</a></td>
+</tr>
+</table>
+<table>
+<td><h3>□ 其他部门</h3></td>
+<tr>
+<td><a href="http://dag.nwpu.edu.cn/" target="_blank">·校史档案馆</a></td>
+<td><a href="http://tushuguan.nwpu.edu.cn/" target="_blank">·图书馆</a></td>
+</tr>
+<tr>
+<td><a href="http://yiyuan.nwpu.edu.cn/" target="_blank">·校医院</a></td>
+<td><a href="http://chanye.nwpu.edu.cn/" target="_blank">·资产经营公司</a></td>
+</tr>
+<tr>
+<td><a href="http://houqin.nwpu.edu.cn/" target="_blank">·后勤产业集团</a></td>
+<td><a href="http://www.nwpup.com/" target="_blank">·出版社</a></td>
+</tr>
+<tr>
+<td><a href="http://aisheng.nwpu.edu.cn/" target="_blank">·三六五所</a></td>
+<td><a href="http://dianzi.nwpu.edu.cn/" target="_blank">·基础教育中心</a></td>
+</tr>
+</table>
+</div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+

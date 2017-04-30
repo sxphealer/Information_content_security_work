@@ -1,0 +1,122 @@
+div#header {
+        width:100%;
+        height:77px;
+	    overflow: hidden;
+        background-color:#004ea2;
+        display: inline-block;
+        vertical-align:top;
+        text-shadow:1px 1px 1px #111111;
+        color:#ffffff;
+}
+div#logo {
+        left:10%;
+	    width:200px;
+        text-align:left;
+	    float:left;
+        text-shadow:1px 2px 7px #000000;
+        height: 37px;
+        line-height: 37px;
+        clear: both;
+        position:relative;
+        margin: 0 auto;
+}
+div#sidebar{
+	width:30%;
+	overflow: hidden;
+	position:relative;
+	float:left;
+	text-align:left;
+	background-color:#f0f0f0;
+}
+div#content{
+	width:40%;
+	overflow: hidden;
+	position:relative;
+	float:right;
+	text-align:left;
+	background-color:#f0f0f0;
+        margin-right:30%;
+}
+div#footbox{
+        position:relative;
+}
+div#footer {
+        width:100%;
+        text-align:center;
+	    overflow: hidden;
+        background-color:#004ea2;
+        color:#ffffff;
+        height: 37px;
+        line-height: 37px;
+        clear: both;
+        position:relative;
+        bottom:0;
+        margin: 0 auto;
+}
+td{
+        padding:5px;
+}
+h3{
+        color: #0066cc;
+        font-size:15.5pt;
+        font-family:"宋体";
+        padding:7px;
+}
+body,td,th {
+        font-size: 15px;
+        color: #333333;}
+body {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        background-color:#f0f0f0;
+}
+a:link {
+        color: #0000cc;
+        text-decoration: none;
+}
+a:visited {
+        color: #00ccee;
+        text-decoration: none;
+}
+a:hover {
+        color: #990033;
+        text-decoration: none;
+}
+a:active {
+        color: #990033;
+        text-decoration: none;
+}
+.inputbox {
+	width: 526px;
+	height: 29px;
+        line-height:29px;
+	font: 16px/18px arial;
+	margin: 6px 0px 0px 7px;
+	padding: 0px;
+	background: transparent none repeat scroll 0% 0%;
+	border: 1px solid #2D78F4;
+	outline: 0px none;
+}
+.submitbox {
+	width: 100px;
+	height: 34px;
+	color: #FFF;
+	letter-spacing: 1px;
+	background: #3385FF none repeat scroll 0% 0%;
+	border-bottom: 1px solid #2D78F4;
+	outline: medium none;
+	cursor: pointer;
+}
+em{
+	font-style:normal;
+	color: #C00;
+}
+.match {
+       font-weight:77px;
+}
+
+
+
+

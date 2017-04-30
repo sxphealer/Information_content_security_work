@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block result %}
+{% if results %}
+<h3>以下为相关搜索结果：</h3>
+{%for result in results%}
+<table>
+<tr>
+<td><strong><a href={{ result['path'] }} target="_blank">{{ result['title'] }}</a></strong></td>
+</tr>
+<tr>
+<td>{{ result['content'][0:200] }}...</td>
+
+
+</tr>
+</table>
+{% endfor%}
+{% else %}
+<h3>很抱歉，未能找到你搜索的内容!</h3>
+{% endif %}
+{% endblock %}
+
