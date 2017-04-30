@@ -1,3 +1,0 @@
-<title>Home Page</title>
-<form name="f">
-<input name="wd" maxlength="100" type="text">
